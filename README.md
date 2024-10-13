@@ -30,8 +30,8 @@ The project also tracks new maximum and minimum values in the data stream and vi
 1. Clone this repository:
 
    ```bash
-   git clone <repository_url>
-   cd <repository_folder>
+   git clone git@github.com:jay-tau/anomaly-detection-cobblestone-energy.git
+   cd anomaly-detection-cobblestone-energy/
    ```
 
 2. Install the required dependencies:
