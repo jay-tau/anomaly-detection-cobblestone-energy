@@ -34,7 +34,14 @@ The project also tracks new maximum and minimum values in the data stream and vi
    cd anomaly-detection-cobblestone-energy/
    ```
 
-2. Install the required dependencies:
+2. Create and activate a virtual environment:
+
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate
+   ```
+
+3. Install the required dependencies:
 
    ```bash
    pip install -r requirements.txt
