@@ -3,11 +3,13 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 from collections import deque
 
+np.random.seed(0)
+
 # Stream parameters
 WINDOW_SIZE = 50
 ALPHA = 0.3  # For EWMA
-Z_THRESHOLD = 2.5  # Z-score threshold for anomaly detection
-SPIKE_THRESHOLD = 0.8
+Z_THRESHOLD = 2.4375  # Z-score threshold for anomaly detection
+SPIKE_THRESHOLD = 0.98  # Probability threshold for introducing spikes
 
 # Function to simulate data stream with periodic signal and noise
 def data_stream():
@@ -17,7 +19,7 @@ def data_stream():
         noise = np.random.normal(0, 1)   # Random noise
         spike = 0
         if np.random.rand() > SPIKE_THRESHOLD:      # Introduce random spikes
-            spike = np.random.uniform(10, 20)
+            spike = np.random.uniform(20, 30)
         yield seasonal + noise + spike
         t += 1
 
